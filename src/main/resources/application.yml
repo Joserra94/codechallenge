@@ -1,0 +1,19 @@
+# Specific microservice properties
+server:
+  servlet:
+    context-path: /codechallenge-v1
+  port: 8080
+
+aspect:
+  logging:
+    enabled: true
+    logParameters: true
+    logResponse: true
+    excludedSignatures:
+
+spring:
+  profiles:
+    active: ${ENVIRONMENT:local}
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: true
